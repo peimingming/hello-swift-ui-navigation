@@ -17,6 +17,7 @@ struct NavigationViewContentView: View {
     enum ViewType {
         case note
         case color
+        case threeColumns
     }
     
     let viewType: ViewType
@@ -49,6 +50,12 @@ struct NavigationViewContentView: View {
                 
                 Text("Select a color") // A placeholder to show before selection.
             }
+        case .threeColumns:
+            NavigationView {
+                Text("First column")
+                Text("Second column")
+                Text("Third column")
+            }
         }
     }
 }
@@ -74,4 +81,8 @@ struct NavigationViewContentView: View {
         NavigationViewContentView(viewType: .color)
             .navigationViewStyle(.automatic)
     }
+}
+
+#Preview("Three coloumns") {
+    NavigationViewContentView(viewType: .threeColumns)
 }
