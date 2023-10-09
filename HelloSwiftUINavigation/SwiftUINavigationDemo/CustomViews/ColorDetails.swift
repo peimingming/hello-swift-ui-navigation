@@ -11,6 +11,9 @@ struct ColorDetails: View {
     let color: Color
     
     var body: some View {
-        color.navigationTitle(color.description)
+        color
+            .frame(width: 200, height: 200)
+            .navigationTitle(color.description.capitalized)
+            .navigationBarTitleDisplayMode(.inline)
     }
 }

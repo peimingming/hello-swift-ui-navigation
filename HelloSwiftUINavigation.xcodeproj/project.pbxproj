@@ -21,6 +21,8 @@
 		63B1524E2AD32FF300D8943E /* NavigationBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B1524D2AD32FF300D8943E /* NavigationBarContentView.swift */; };
 		63B152502AD3351D00D8943E /* TabViewContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B1524F2AD3351D00D8943E /* TabViewContentView.swift */; };
 		63B152522AD335E700D8943E /* NavigationViewContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B152512AD335E700D8943E /* NavigationViewContentView.swift */; };
+		63B152542AD458C200D8943E /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B152532AD458C200D8943E /* Note.swift */; };
+		63B152572AD459A000D8943E /* NoteEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B152562AD459A000D8943E /* NoteEditor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		63B1524D2AD32FF300D8943E /* NavigationBarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarContentView.swift; sourceTree = "<group>"; };
 		63B1524F2AD3351D00D8943E /* TabViewContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewContentView.swift; sourceTree = "<group>"; };
 		63B152512AD335E700D8943E /* NavigationViewContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewContentView.swift; sourceTree = "<group>"; };
+		63B152532AD458C200D8943E /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		63B152562AD459A000D8943E /* NoteEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 				63B1524D2AD32FF300D8943E /* NavigationBarContentView.swift */,
 				63B1524F2AD3351D00D8943E /* TabViewContentView.swift */,
 				63B152512AD335E700D8943E /* NavigationViewContentView.swift */,
+				63B152552AD458D000D8943E /* CustomViews */,
 				63B152442AD3266300D8943E /* Models */,
 			);
 			path = SwiftUINavigationDemo;
@@ -108,9 +113,18 @@
 		63B152442AD3266300D8943E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				63B152452AD3267900D8943E /* ColorDetails.swift */,
+				63B152532AD458C200D8943E /* Note.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		63B152552AD458D000D8943E /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				63B152452AD3267900D8943E /* ColorDetails.swift */,
+				63B152562AD459A000D8943E /* NoteEditor.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,10 +202,12 @@
 				63B152302AD3096500D8943E /* ContentView.swift in Sources */,
 				63B1523F2AD312DF00D8943E /* NavigationStackContentView.swift in Sources */,
 				63B1524A2AD328D200D8943E /* NavigationSplitViewContentView.swift in Sources */,
+				63B152542AD458C200D8943E /* Note.swift in Sources */,
 				63B1522E2AD3096500D8943E /* HelloSwiftUINavigationApp.swift in Sources */,
 				63B1524E2AD32FF300D8943E /* NavigationBarContentView.swift in Sources */,
 				63B152432AD324F200D8943E /* NavigationDestinationContentView.swift in Sources */,
 				63B1524C2AD3292800D8943E /* NavigationTitleContentView.swift in Sources */,
+				63B152572AD459A000D8943E /* NoteEditor.swift in Sources */,
 				63B152502AD3351D00D8943E /* TabViewContentView.swift in Sources */,
 				63B152462AD3267900D8943E /* ColorDetails.swift in Sources */,
 				63B152522AD335E700D8943E /* NavigationViewContentView.swift in Sources */,
@@ -325,9 +341,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HelloSwiftUINavigation/Preview Content\"";
+				DEVELOPMENT_TEAM = T69Z9BV3Q5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -343,6 +361,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.eric.HelloSwiftUINavigation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -354,9 +373,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HelloSwiftUINavigation/Preview Content\"";
+				DEVELOPMENT_TEAM = T69Z9BV3Q5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -372,6 +393,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.eric.HelloSwiftUINavigation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
