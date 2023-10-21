@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		635A0A3C2AE3E29A006BF482 /* CustomNavigationColorDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A0A3B2AE3E29A006BF482 /* CustomNavigationColorDetails.swift */; };
 		63B1522E2AD3096500D8943E /* HelloSwiftUINavigationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B1522D2AD3096500D8943E /* HelloSwiftUINavigationApp.swift */; };
 		63B152302AD3096500D8943E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B1522F2AD3096500D8943E /* ContentView.swift */; };
 		63B152322AD3096600D8943E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63B152312AD3096600D8943E /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		635A0A3B2AE3E29A006BF482 /* CustomNavigationColorDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationColorDetails.swift; sourceTree = "<group>"; };
 		63B1522A2AD3096500D8943E /* HelloSwiftUINavigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloSwiftUINavigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63B1522D2AD3096500D8943E /* HelloSwiftUINavigationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloSwiftUINavigationApp.swift; sourceTree = "<group>"; };
 		63B1522F2AD3096500D8943E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			children = (
 				63B152452AD3267900D8943E /* ColorDetails.swift */,
 				63B152562AD459A000D8943E /* NoteEditor.swift */,
+				635A0A3B2AE3E29A006BF482 /* CustomNavigationColorDetails.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				63B152502AD3351D00D8943E /* TabViewContentView.swift in Sources */,
 				63B152462AD3267900D8943E /* ColorDetails.swift in Sources */,
 				63B152522AD335E700D8943E /* NavigationViewContentView.swift in Sources */,
+				635A0A3C2AE3E29A006BF482 /* CustomNavigationColorDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

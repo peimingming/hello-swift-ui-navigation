@@ -24,34 +24,48 @@ struct NavigationBarContentView: View {
     }
 }
 
-#Preview {
+#Preview("Hide back button") {
     NavigationBarContentView()
 }
 
 struct NavigationBarContentView1: View {
     private let colors: [Color] = [.red, .yellow, .blue]
     
+    @State private var isTopTrailingGrouped = true
+    @State private var isButtonItem = true
+    
     var body: some View {
         NavigationView {
-            List(colors, id: \.self) { color in
-                NavigationLink(color.description) {
-                    ColorDetails(color: color)
-                        .navigationBarBackButtonHidden()
-                        .navigationBarTitleDisplayMode(.inline)
-                        .navigationBarItems(
-                            leading: Button(
-                                "123",
-                                systemImage: "chevron.backward",
-                                action: {
-                                    // pop
-                                }
-                            ),
-                            trailing: Image(systemName: "folder")
+            VStack {
+                List(colors, id: \.self) { color in
+                    NavigationLink(color.description) {
+                        CustomNavigationColorDetails(
+                            color: color,
+                            isTopTrailingGrouped: isTopTrailingGrouped, 
+                            isButtonItem: isButtonItem
                         )
+                    }
+                }
+                .navigationTitle("Colors")
+                
+                Picker(
+                    "isTopTrailingGrouped",
+                    selection: $isTopTrailingGrouped
+                ) {
+                    Text("ToolbarItemGroup as trailing view").tag(true)
+                    Text("ToolbarItem as trailing view").tag(false)
+                }
+                
+                Picker(
+                    "isButtonItem",
+                    selection: $isButtonItem
+                ) {
+                    Text("Button as trailing item").tag(true)
+                    Text("NavigationLink as trailing item").tag(false)
                 }
             }
-            .navigationTitle("Colors")
         }
+        .navigationViewStyle(.stack)
     }
 }
 

@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var showDemo: Bool = false
+    @State private var showDemo: Bool = true
     
     var body: some View {
         if showDemo {
             // Show demo here.
-            NavigationViewContentView()
+            NavigationBarContentView1()
         } else {
             introductionView
         }

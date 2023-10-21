@@ -74,13 +74,8 @@ struct NavigationViewContentView: View {
 }
 
 #Preview("NavigationView view style (columns)") {
-    if #available(iOS 15.0, *) {
-        NavigationViewContentView(viewType: .color)
-            .navigationViewStyle(.columns)
-    } else {
-        NavigationViewContentView(viewType: .color)
-            .navigationViewStyle(.automatic)
-    }
+    NavigationViewContentView(viewType: .color)
+        .navigationViewStyle(.automatic)
 }
 
 #Preview("Three coloumns") {
