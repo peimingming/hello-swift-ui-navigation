@@ -65,6 +65,8 @@ struct NavigationTitleContentView2: View {
                 }
             }
             .navigationTitle("Colors")
+            // TODO: Test on a physical device and spike a custom document conforms to Transferable.
+            // https://developer.apple.com/documentation/swiftui/configure-your-apps-navigation-titles
             .navigationDocument(URL(string: "www.baidu.com")!)
         }
     }
