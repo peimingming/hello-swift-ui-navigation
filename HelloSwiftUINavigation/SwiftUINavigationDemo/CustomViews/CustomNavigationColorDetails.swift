@@ -9,16 +9,18 @@ import SwiftUI
 
 struct CustomNavigationColorDetails: View {
     let color: Color
-    let isTopTrailingGrouped: Bool
-    let isButtonItem: Bool
+    let topTrailingType: TopTrailingType
+    let topTrailingItemType: TopTrailingItemType
     
     @Environment(\.presentationMode) private var presentationMode
     
     @State private var isDisplayingSubPage = false
     
     var body: some View {
-        if isButtonItem {
-            if isTopTrailingGrouped {
+        switch topTrailingItemType {
+        case .button:
+            switch topTrailingType {
+            case .toolbarItemGroup:
                 baseView
                     .toolbar {
                         ToolbarItemGroup(placement: .topBarTrailing) {
@@ -27,7 +29,7 @@ struct CustomNavigationColorDetails: View {
                             }
                         }
                     }
-            } else {
+            case .toolbarItem:
                 baseView
                     .toolbar {
                         ToolbarItem(placement: .topBarTrailing) {
@@ -39,8 +41,9 @@ struct CustomNavigationColorDetails: View {
                         }
                     }
             }
-        } else {
-            if isTopTrailingGrouped {
+        case .navigationLink:
+            switch topTrailingType {
+            case .toolbarItemGroup:
                 baseView
                     .toolbar {
                         ToolbarItemGroup(placement: .topBarTrailing) {
@@ -49,7 +52,7 @@ struct CustomNavigationColorDetails: View {
                             }
                         }
                     }
-            } else {
+            case .toolbarItem:
                 baseView
                     .toolbar {
                         ToolbarItem(placement: .topBarTrailing) {
@@ -93,9 +96,10 @@ struct CustomNavigationColorDetails: View {
     }
     
     private var barItem: any View {
-        if isButtonItem {
+        switch topTrailingItemType {
+        case .button:
             barButton
-        } else {
+        case .navigationLink:
             barLink
         }
     }
@@ -127,7 +131,7 @@ struct CustomNavigationColorDetails: View {
 #Preview {
     CustomNavigationColorDetails(
         color: .red,
-        isTopTrailingGrouped: true,
-        isButtonItem: true
+        topTrailingType: .toolbarItemGroup,
+        topTrailingItemType: .button
     )
 }

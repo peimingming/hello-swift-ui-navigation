@@ -10,16 +10,24 @@ import SwiftUI
 struct NavigationBarContentView: View {
     private let colors: [Color] = [.red, .yellow, .blue]
     
+    private static let introduction = """
+    This demo is to hide the back button of the navigation bar.
+    """
+    
     var body: some View {
         NavigationView {
-            List(colors, id: \.self) { color in
-                NavigationLink(color.description) {
-                    ColorDetails(color: color)
-                        .navigationBarBackButtonHidden()
+            VStack {
+                List(colors, id: \.self) { color in
+                    NavigationLink(color.description) {
+                        ColorDetails(color: color)
+                            .navigationBarBackButtonHidden()
+                    }
                 }
+                .navigationTitle("Colors")
+                .navigationBarTitleDisplayMode(.inline)
+                
+                Text(Self.introduction)
             }
-            .navigationTitle("Colors")
-            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
@@ -31,8 +39,12 @@ struct NavigationBarContentView: View {
 struct NavigationBarContentView1: View {
     private let colors: [Color] = [.red, .yellow, .blue]
     
-    @State private var isTopTrailingGrouped = true
-    @State private var isButtonItem = true
+    @State private var topTrailingType: TopTrailingType = .toolbarItemGroup
+    @State private var topTrailingItemType: TopTrailingItemType = .button
+    
+    private static let introduction = """
+    This demo is for the customization of top leading and top trailing items in a navigation bar.
+    """
     
     var body: some View {
         NavigationView {
@@ -41,27 +53,29 @@ struct NavigationBarContentView1: View {
                     NavigationLink(color.description) {
                         CustomNavigationColorDetails(
                             color: color,
-                            isTopTrailingGrouped: isTopTrailingGrouped, 
-                            isButtonItem: isButtonItem
+                            topTrailingType: topTrailingType,
+                            topTrailingItemType: topTrailingItemType
                         )
                     }
                 }
                 .navigationTitle("Colors")
                 
+                Text(Self.introduction)
+                
                 Picker(
-                    "isTopTrailingGrouped",
-                    selection: $isTopTrailingGrouped
+                    "Top trailing type",
+                    selection: $topTrailingType
                 ) {
-                    Text("ToolbarItemGroup as trailing view").tag(true)
-                    Text("ToolbarItem as trailing view").tag(false)
+                    Text("ToolbarItemGroup as trailing view").tag(TopTrailingType.toolbarItemGroup)
+                    Text("ToolbarItem as trailing view").tag(TopTrailingType.toolbarItem)
                 }
                 
                 Picker(
-                    "isButtonItem",
-                    selection: $isButtonItem
+                    "Top trailing item type",
+                    selection: $topTrailingItemType
                 ) {
-                    Text("Button as trailing item").tag(true)
-                    Text("NavigationLink as trailing item").tag(false)
+                    Text("Button as trailing item").tag(TopTrailingItemType.button)
+                    Text("NavigationLink as trailing item").tag(TopTrailingItemType.navigationLink)
                 }
             }
         }

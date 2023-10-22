@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		635A0A3C2AE3E29A006BF482 /* CustomNavigationColorDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A0A3B2AE3E29A006BF482 /* CustomNavigationColorDetails.swift */; };
+		638C783F2AE5772D00C95CDF /* TopTrailingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638C783E2AE5772D00C95CDF /* TopTrailingType.swift */; };
+		638C78412AE5774000C95CDF /* TopTrailingItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638C78402AE5774000C95CDF /* TopTrailingItemType.swift */; };
 		63B1522E2AD3096500D8943E /* HelloSwiftUINavigationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B1522D2AD3096500D8943E /* HelloSwiftUINavigationApp.swift */; };
 		63B152302AD3096500D8943E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B1522F2AD3096500D8943E /* ContentView.swift */; };
 		63B152322AD3096600D8943E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63B152312AD3096600D8943E /* Assets.xcassets */; };
@@ -28,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		635A0A3B2AE3E29A006BF482 /* CustomNavigationColorDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationColorDetails.swift; sourceTree = "<group>"; };
+		638C783E2AE5772D00C95CDF /* TopTrailingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTrailingType.swift; sourceTree = "<group>"; };
+		638C78402AE5774000C95CDF /* TopTrailingItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTrailingItemType.swift; sourceTree = "<group>"; };
 		63B1522A2AD3096500D8943E /* HelloSwiftUINavigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloSwiftUINavigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63B1522D2AD3096500D8943E /* HelloSwiftUINavigationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloSwiftUINavigationApp.swift; sourceTree = "<group>"; };
 		63B1522F2AD3096500D8943E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				63B152532AD458C200D8943E /* Note.swift */,
+				638C783E2AE5772D00C95CDF /* TopTrailingType.swift */,
+				638C78402AE5774000C95CDF /* TopTrailingItemType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -205,6 +211,7 @@
 				63B152302AD3096500D8943E /* ContentView.swift in Sources */,
 				63B1523F2AD312DF00D8943E /* NavigationStackContentView.swift in Sources */,
 				63B1524A2AD328D200D8943E /* NavigationSplitViewContentView.swift in Sources */,
+				638C78412AE5774000C95CDF /* TopTrailingItemType.swift in Sources */,
 				63B152542AD458C200D8943E /* Note.swift in Sources */,
 				63B1522E2AD3096500D8943E /* HelloSwiftUINavigationApp.swift in Sources */,
 				63B1524E2AD32FF300D8943E /* NavigationBarContentView.swift in Sources */,
@@ -215,6 +222,7 @@
 				63B152462AD3267900D8943E /* ColorDetails.swift in Sources */,
 				63B152522AD335E700D8943E /* NavigationViewContentView.swift in Sources */,
 				635A0A3C2AE3E29A006BF482 /* CustomNavigationColorDetails.swift in Sources */,
+				638C783F2AE5772D00C95CDF /* TopTrailingType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
