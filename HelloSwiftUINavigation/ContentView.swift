@@ -13,7 +13,11 @@ struct ContentView: View {
     var body: some View {
         if showDemo {
             // Show demo here.
-            NavigationBarContentView1()
+            if #available(iOS 16.0, *) {
+                NavigationTitleContentView2()
+            } else {
+                // Fallback on earlier versions
+            }
         } else {
             introductionView
         }

@@ -80,13 +80,17 @@ struct NavigationTitleContentView3: View {
     
     var body: some View {
         NavigationView {
-            List(colors, id: \.self) { color in
-                NavigationLink(color.description) {
-                    ColorDetails(color: color)
+            VStack {
+                List(colors, id: \.self) { color in
+                    NavigationLink(color.description) {
+                        ColorDetails(color: color)
+                    }
                 }
+                .navigationTitle(Text("Colors\nSub title"))
+                .navigationBarTitleDisplayMode(.inline)
+                
+                Text("This demo proves that the system modifier `navigationTitle(_:)` will only treat the first line of Text as the navigation title.")
             }
-            .navigationTitle(Text("Colors\nSub title"))
-            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
