@@ -59,15 +59,19 @@ struct NavigationTitleContentView2: View {
     
     var body: some View {
         NavigationView {
-            List(colors, id: \.self) { color in
-                NavigationLink(color.description) {
-                    ColorDetails(color: color)
+            VStack {
+                List(colors, id: \.self) { color in
+                    NavigationLink(color.description) {
+                        ColorDetails(color: color)
+                    }
                 }
+                .navigationTitle("Colors")
+                // TODO: Test on a physical device and spike a custom document conforms to Transferable.
+                // https://developer.apple.com/documentation/swiftui/configure-your-apps-navigation-titles
+                .navigationDocument(URL(string: "https://www.baidu.com")!)
+                
+                Text("This is a demo for `navigationDocument(_:)` with document")
             }
-            .navigationTitle("Colors")
-            // TODO: Test on a physical device and spike a custom document conforms to Transferable.
-            // https://developer.apple.com/documentation/swiftui/configure-your-apps-navigation-titles
-            .navigationDocument(URL(string: "www.baidu.com")!)
         }
     }
 }
