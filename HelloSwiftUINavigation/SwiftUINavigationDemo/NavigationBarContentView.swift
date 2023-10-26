@@ -43,8 +43,28 @@ struct NavigationBarContentView1: View {
     @State private var topTrailingItemType: TopTrailingItemType = .button
     
     private static let introduction = """
-    This demo is for the customization of top leading and top trailing items in a navigation bar.
+    This demo is for the customization:
+    1. background color.
+    2. bottom divider color for standard and scroll apperance.
+    3. top leading and top trailing items in a navigation bar.
     """
+    
+    init() {
+        let standardAppearance = UINavigationBarAppearance()
+        standardAppearance.configureWithTransparentBackground()
+        standardAppearance.backgroundColor = .green
+        standardAppearance.backgroundImage = UIImage()
+        standardAppearance.shadowColor = .red
+        standardAppearance.shadowImage = UIImage()
+        let scrollEdgeAppearance = UINavigationBarAppearance()
+        scrollEdgeAppearance.configureWithTransparentBackground()
+        scrollEdgeAppearance.backgroundColor = .green
+        scrollEdgeAppearance.backgroundImage = UIImage()
+        scrollEdgeAppearance.shadowColor = .clear
+        scrollEdgeAppearance.shadowImage = UIImage()
+        UINavigationBar.appearance().standardAppearance = standardAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = scrollEdgeAppearance
+    }
     
     var body: some View {
         NavigationView {
